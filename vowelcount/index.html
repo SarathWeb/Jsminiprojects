@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vowel Count</title>
+</head>
+
+<body>
+    <script>
+
+        // const getCount = str => {
+
+        //     let vowel = ['a', 'e', 'i', 'o', 'u'];
+
+        //     let word = str.split(" ").join("");
+        //     let count = 0;
+
+        //     for (let i = 0; i < word.length; i++) {
+
+        //         if (vowel.includes(word[i])) {
+        //             count += 1;
+        //         }
+
+        //     }
+        //     return count;
+        // };
+
+        const getCount = str => {
+
+                let arr = [...str];
+                let vowel = ['a', 'e', 'i', 'o', 'u'];
+
+                return arr.filter(ele=>vowel.includes(ele)).length
+        }
+
+        console.log(getCount('abracadabra'));
+    </script>
+</body>
+
+</html>
