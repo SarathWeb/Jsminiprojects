@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disemvowel</title>
+</head>
+
+<body>
+    <script>
+
+        const disemvowel = str => {
+
+            let arr = [...str];
+            let vowel = ['a', 'e', 'i', 'o', 'u'];
+
+            let result = ''
+
+            for (let i = 0; i < arr.length; i++) {
+
+                if (!vowel.includes(arr[i])) {
+
+                    result += arr[i]
+
+
+                }
+
+            }
+
+            return result;
+
+        }
+
+        console.log(disemvowel('JavaScript'));
+
+    </script>
+</body>
+
+</html>
