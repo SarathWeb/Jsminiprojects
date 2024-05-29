@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+</head>
+<body>
+    <script>
+        const past = (h,m,s)=>{
+        
+            let onesec = 1000;
+             let onemin = 60000;
+             let onehour = 3600000;
+        
+        return onehour*h + onemin*m + onesec*s;
+        
+        }
+        
+         console.log(past(0,1,1)); 
+        
+        
+        </script>
+</body>
+</html>
