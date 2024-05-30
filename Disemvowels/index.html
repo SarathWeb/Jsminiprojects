@@ -10,29 +10,36 @@
 <body>
     <script>
 
-        const disemvowel = str => {
+        // const disemvowel = str => {
 
-            let arr = [...str];
+        //     let arr = [...str];
+        //     let vowel = ['a', 'e', 'i', 'o', 'u'];
+
+        //     let result = ''
+
+        //     for (let i = 0; i < arr.length; i++) {
+
+        //         if (!vowel.includes(arr[i])) {
+
+        //             result += arr[i]
+
+
+        //         }
+
+        //     }
+
+        //     return result;
+
+        // }
+
+        const disemvowel = str => {
+            // Let's use regular expressions (regex)
             let vowel = ['a', 'e', 'i', 'o', 'u'];
 
-            let result = ''
+            return str.replace(/[aeiou]/gi, '');
+        };
 
-            for (let i = 0; i < arr.length; i++) {
-
-                if (!vowel.includes(arr[i])) {
-
-                    result += arr[i]
-
-
-                }
-
-            }
-
-            return result;
-
-        }
-
-        console.log(disemvowel('JavaScript'));
+        console.log(disemvowel('Java Script is Beautiful'));
 
     </script>
 </body>
