@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle Character</title>
+</head>
+
+<body>
+    <script>
+        const getMiddle = str => {
+
+        
+
+            let arr = str.split('');
+
+            let len = arr.length;
+
+           return len % 2 ? arr[Math.floor(len/2)] : arr[len/2 -1] + arr[len/2];
+
+        };
+
+        console.log(getMiddle('script'));
+
+    </script>
+</body>
+
+</html>
