@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Odd Int</title>
+</head>
+
+<body>
+    <script>
+
+        // const oddint = (odd) => {
+
+        //     let storeobj = {}
+
+        //     for (let i = 0; i < odd.length; i++) {
+
+        //         if (!storeobj[odd[i]]) {
+        //             storeobj[odd[i]] = 0;
+        //         }
+        //         storeobj[odd[i]]++; 
+        //     }
+
+        //     let key = Object.keys(storeobj)
+
+
+
+        //     for (let j = 0; j < key.length; j++) {
+
+        //         if (storeobj[key[j]] % 2 !== 0) {
+        //             return key[j];
+        //         }
+
+        //     }
+
+
+        // }
+
+        // Alter Method:
+
+        const oddint = (num) => {
+
+            let storeobj = {}
+
+            num.forEach(num => {
+
+                storeobj[num] = (storeobj[num] || 0) + 1
+
+            })
+
+            return Object.keys(storeobj).filter(no => storeobj[no] % 2 !== 0);
+
+        }
+
+
+
+        console.log(oddint([0, 1, 0, 1, 0, 2, 3, 5]));
+
+    </script>
+</body>
+
+</html>
