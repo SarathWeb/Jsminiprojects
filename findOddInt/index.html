@@ -10,48 +10,54 @@
 <body>
     <script>
 
-        // const oddint = (odd) => {
-
-        //     let storeobj = {}
-
-        //     for (let i = 0; i < odd.length; i++) {
-
-        //         if (!storeobj[odd[i]]) {
-        //             storeobj[odd[i]] = 0;
-        //         }
-        //         storeobj[odd[i]]++; 
-        //     }
-
-        //     let key = Object.keys(storeobj)
-
-
-
-        //     for (let j = 0; j < key.length; j++) {
-
-        //         if (storeobj[key[j]] % 2 !== 0) {
-        //             return key[j];
-        //         }
-
-        //     }
-
-
-        // }
-
-        // Alter Method:
-
-        const oddint = (num) => {
+        const oddint = (odd) => {
 
             let storeobj = {}
 
-            num.forEach(num => {
+            for (let i = 0; i < odd.length; i++) {
 
-                storeobj[num] = (storeobj[num] || 0) + 1
+                if (!storeobj[odd[i]]) {
+                    storeobj[odd[i]] = 0;
+                }
+                storeobj[odd[i]]++;
+            }
 
-            })
+            console.log(storeobj,'storeobj'
+            );
 
-            return Object.keys(storeobj).filter(no => storeobj[no] % 2 !== 0);
+            let key = Object.keys(storeobj)
 
+           
+
+           let result = ''
+
+            for (let j = 0; j < key.length; j++) {
+
+                if (storeobj[key[j]] % 2 !== 0) {
+                   result += key[j]+ ' ';
+  
+                }
+
+            }
+
+  return result;
         }
+
+        // Alter Method:
+
+        // const oddint = (num) => {
+
+        //     let storeobj = {}
+
+        //     num.forEach(num => {
+
+        //         storeobj[num] = (storeobj[num] || 0) + 1
+
+        //     })
+
+        //     return Object.keys(storeobj).filter(no => storeobj[no] % 2 !== 0);
+
+        // }
 
 
 
